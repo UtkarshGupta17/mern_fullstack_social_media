@@ -144,8 +144,8 @@ import React, { useEffect, useState } from "react";
 import { Stack, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import Comment from "./Comment";
-import Loading from "../../../../DevMingle/client/src/components/Loading";
-import { getComments } from "../../../../DevMingle/client/src/api/posts";
+import Loading from "./Loading";
+import { getComments } from "../api/posts";
 import { useParams } from "react-router-dom";
 import CommentEditor from "./CommentEditor";
 import { useTheme } from "@mui/system"; // Add this import

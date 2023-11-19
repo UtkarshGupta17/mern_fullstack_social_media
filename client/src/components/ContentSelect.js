@@ -1,6 +1,6 @@
 import { MenuItem, Select, Typography } from "@mui/material";
 import React, { useState } from "react";
-import HorizontalStack from "../../../../DevMingle/client/src/components/util/HorizontalStack";
+import HorizontalStack from "./util/HorizontalStack";
 
 const ContentSelect = () => {
   const [content, setContent] = useState("post");

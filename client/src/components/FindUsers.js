@@ -10,11 +10,11 @@ import React, { useEffect, useState } from "react";
 import { AiOutlineUser } from "react-icons/ai";
 import { MdRefresh } from "react-icons/md";
 import { Link } from "react-router-dom";
-import { getRandomUsers } from "../../../../DevMingle/client/src/api/users";
-import Loading from "../../../../DevMingle/client/src/components/Loading";
-import UserAvatar from "../../../../DevMingle/client/src/components/UserAvatar";
-import HorizontalStack from "../../../../DevMingle/client/src/components/util/HorizontalStack";
-import UserEntry from "../../../../DevMingle/client/src/components/UserEntry";
+import { getRandomUsers } from "../api/users";
+import Loading from "./Loading";
+import UserAvatar from "./UserAvatar";
+import HorizontalStack from "./util/HorizontalStack";
+import UserEntry from "./UserEntry";
 
 const FindUsers = () => {
   const [loading, setLoading] = useState(true);
