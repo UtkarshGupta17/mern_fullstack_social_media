@@ -1,8 +1,8 @@
 import { Avatar, Typography } from "@mui/material";
 import React from "react";
-import HorizontalStack from "../../../../../DevMingle/client/src/components/util/HorizontalStack";
+import HorizontalStack from "../../../../DevMingle/client/src/components/util/HorizontalStack";
 import Moment from "react-moment";
-import UserAvatar from "../../../../../DevMingle/client/src/components/UserAvatar";
+import UserAvatar from "../../../../DevMingle/client/src/components/UserAvatar";
 import { Link } from "react-router-dom";
 
 const ContentDetails = ({ username, createdAt, edited, preview }) => {
