@@ -6,7 +6,7 @@ import { Box } from "@mui/system";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { createComment } from "../../../../DevMingle/client/src/api/posts";
 import { isLoggedIn } from "../../../../DevMingle/client/src/helpers/authHelper";
-import ErrorAlert from "../../../../DevMingle/client/src/components/ErrorAlert";
+import ErrorAlert from "./ErrorAlert";
 import HorizontalStack from "../../../../DevMingle/client/src/components/util/HorizontalStack";
 import { useTheme } from "@mui/system"; // Add this import
 
