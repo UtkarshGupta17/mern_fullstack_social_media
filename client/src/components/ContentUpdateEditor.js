@@ -1,9 +1,10 @@
-import { Box, Button, Stack, TextField } from "@mui/material";
 import React, { useState } from "react";
+import { Box, Button, Stack, TextField, useTheme } from "@mui/material";
 
 const ContentUpdateEditor = (props) => {
   const [content, setContent] = useState(props.originalContent);
   const [error, setError] = useState("");
+  const theme = useTheme();
 
   const handleChange = (e) => {
     setContent(e.target.value);
@@ -27,14 +28,23 @@ const ContentUpdateEditor = (props) => {
   };
 
   return (
-    <Box component="form" onSubmit={handleSubmit}>
+    <Box
+      component="form"
+      onSubmit={handleSubmit}
+      sx={{
+        backgroundColor: theme.palette.background.default,
+        padding: theme.spacing(3),
+        borderRadius: theme.shape.borderRadius,
+        boxShadow: theme.components.MuiCard.styleOverrides.root.boxShadow,
+      }}
+    >
       <Stack>
         <TextField
           value={content}
           fullWidth
           margin="normal"
           name="content"
-          sx={{ backgroundColor: "white" }}
+          sx={{ backgroundColor: theme.palette.background.paper }}
           onChange={handleChange}
           error={error.length !== 0}
           helperText={error}
@@ -43,7 +53,10 @@ const ContentUpdateEditor = (props) => {
         <Button
           type="submit"
           variant="outlined"
-          sx={{ backgroundColor: "white", mt: 1 }}
+          sx={{
+            backgroundColor: theme.palette.background.paper,
+            mt: theme.spacing(1),
+          }}
         >
           Update
         </Button>
